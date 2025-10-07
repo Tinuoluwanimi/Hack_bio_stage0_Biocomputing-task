@@ -67,28 +67,62 @@ history
 pwd
 ls
 cd ../
-ls ```
+ls
+```
 
 Project 2: Installing Bioinformatics Software
 
 In this part, I practiced setting up a conda environment and installing commonly used bioinformatics tools through the bioconda channel, including:
 
-Figlet
-
-BWA
-
-BLAST
-
-Samtools
-
-Bedtools
-
-SPAdes
-
-Bcftools
-
-Fastp
-
-MultiQC
+Figlet, BWA, BLAST, Samtools, Bedtools, SPAdes, Bcftools, Fastp, MultiQC
 
 Each step was carried out directly on the terminal, and the exact commands used are documented in the scripts.
+``` # Project 2: Installing Bioinformatics Software on the Terminal
+
+# Activate your base conda environment
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+conda --version
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+# Create a conda environment named funtools
+conda create -n funtools python=3.10
+
+# Activate the funtools environment
+conda activate funtools
+
+# Install Figlet using conda or apt-get
+sudo apt-get update
+sudo apt-get install figlet
+
+# Run figlet <your name>
+figlet Tinuoluwanimi
+
+# Install bwa through the bioconda channel
+conda install bwa
+
+# Install blast through the bioconda channel
+conda install blast
+
+# Install samtools through the bioconda channel
+conda install samtools
+
+# Install bedtools through the bioconda channel
+conda install bedtools
+
+# Install spades.py through the bioconda channel
+conda install spades.py
+
+# Install bcftools through the bioconda channel
+conda install bcftools
+
+# Install fastp through the bioconda channel
+conda install fastp
+
+# Install multiqc through the bioconda channel
+conda install multiqc ```
+
+
+
